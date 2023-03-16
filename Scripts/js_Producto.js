@@ -12,22 +12,21 @@
 
 function guardarProduto() {
 
-    var idProducto = getParameterByName("idProducto");
+    var IdProducto = getParameterByName("IdProducto");
     $.ajax({
         type: "POST",
         url: UrlGuardarProducto,
         async: true,
         data: {
-            idProducto: idProducto,
+            IdProducto: IdProducto,
             Tipo: document.getElementById("Tipo").value,
-            Nombre: document.getElementById("nombre"),
-            Descripcion: document.getElementById("descripcion"),
-            Cantidad: document.getElementById("cantidad"),
-            Costo: document.getElementById("costo"),
+            Nombre: document.getElementById("nombre").value,
+            Descripcion: document.getElementById("descripcion").value,
+            Cantidad: document.getElementById("cantidad").value,
+            Costo: document.getElementById("costo").value,
         },
         success: function (data) {
-
-            location.href = "../home/Productos"
+            location.href = "../home/Productos";
         },
         error: function (xhr, status, error) {
             alert(error);
