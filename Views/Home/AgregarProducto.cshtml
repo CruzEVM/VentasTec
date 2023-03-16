@@ -1,5 +1,4 @@
-﻿
-<script>
+﻿<script>
     var UrlGuardarProducto = '@Url.Action("guardarProducto","home")'
 </script>
 
@@ -28,11 +27,11 @@
         <label>Nombre</label>
         @if (ViewBag.Producto != null)
         {
-            <input type="text" id="Nombre</" name="Nombre</" class="form-control" value="@ViewBag.Producto.Nombre</" />
+            <input type="text" id="Nombre" name="Nombre" class="form-control" value="@ViewBag.Producto.Nombre" />
         }
         else
         {
-            <input type="text" id="Nombre</" name="Nombre</" class="form-control" />
+            <input type="text" id="Nombre" name="Nombre" class="form-control" />
         }
     </div>
 
@@ -77,7 +76,7 @@
     </div>
 </div>
 
-<br/>
+<br />
 
 <div class="row">
     <div class="col-md-2">
