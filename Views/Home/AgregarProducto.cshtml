@@ -1,0 +1,86 @@
+﻿
+<script>
+    var UrlGuardarProducto = '@Url.Action("guardarProducto","home")'
+</script>
+
+<script src="~/Scripts/js_Producto.js"></script>
+
+<center class=" bg-gradient-blue align-self-xl-center">REGISTRO DE PRODUCTOS</center>
+
+<div class="row">
+
+    <div class="col-md-4">
+        <label>Tipo</label>
+        @if (ViewBag.Producto != null)
+        {
+            <input type="text" id="Tipo" name="Tipo" class="form-control" value="@ViewBag.Producto.Tipo" />
+        }
+        else
+        {
+            <input type="text" id="Tipo" name="Tipo" class="form-control" />
+        }
+
+    </div>
+
+
+    <div class="col-md-4">
+
+        <label>Nombre</label>
+        @if (ViewBag.Producto != null)
+        {
+            <input type="text" id="Nombre</" name="Nombre</" class="form-control" value="@ViewBag.Producto.Nombre</" />
+        }
+        else
+        {
+            <input type="text" id="Nombre</" name="Nombre</" class="form-control" />
+        }
+    </div>
+
+
+    <div class="col-md-4">
+
+        <label>Descripcion</label>
+        @if (ViewBag.Producto != null)
+        {
+            <input type="text" id="Descripcion" name="Descripcion" class="form-control" value="@ViewBag.Producto.Descripcion" />
+        }
+        else
+        {
+            <input type="text" id="Descripcion" name="Descripcion" class="form-control" />
+        }
+    </div>
+
+    <div class="col-md-4">
+
+        <label>Cantidad</label>
+        @if (ViewBag.Producto != null)
+        {
+            <input type="text" id="Cantidad" name="Cantidad" class="form-control" value="@ViewBag.Producto.Cantidad" />
+        }
+        else
+        {
+            <input type="text" id="Cantidad" name="Cantidad" class="form-control" />
+        }
+    </div>
+
+    <div class="col-md-4">
+
+        <label>Costo</label>
+        @if (ViewBag.Producto != null)
+        {
+            <input type="text" id="Costo" name="Costo" class="form-control" value="@ViewBag.Producto.Costo" />
+        }
+        else
+        {
+            <input type="text" id="Costo" name="Costo" class="form-control" />
+        }
+    </div>
+</div>
+
+<br/>
+
+<div class="row">
+    <div class="col-md-2">
+        <a href="javascript:guardarProducto()" class="btn btn-success">Guardar</a>
+    </div>
+</div>

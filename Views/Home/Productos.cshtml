@@ -1,0 +1,28 @@
+﻿
+
+<a href="~/home/AgregarProducto" class="btn btn-primary">Agregar Producto</a>
+<table class="table table-condensed">
+    <tr>
+        <th>idProducto</th>
+        <th>Tipo</th>
+        <th>Nombre</th>
+        <th>Descripcion</th>
+        <th>Cantidad</th>
+        <th>Costo</th>
+        <th>Editar</th>
+        <th>Eliminar</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.idProduto</td>
+            <td>@item.Tipo</td>
+            <td>@item.Nombre</td>
+            <td>@item.Descripcion</td>
+            <td>@item.Cantidad</td>
+            <td>@item.Costo</td>
+            <td><a href="~/home/AgregarProducto?idProducto=@item.idProducto" class="btn btn-info">Editar</a></td>
+            <td><a href="~/home/Eliminar?idProducto=@item.idProducto" class="btn btn-danger">Eliminar</a></td>
+        </tr>
+    }
+</table>
